@@ -1,0 +1,36 @@
+<div>
+	<h1>Global Objects Demo Widget!</h1>
+  <h2>
+    Client-side Data Object 
+  </h2>
+  <textarea readonly class="form-control" rows="5">{{getPrettyData()}}</textarea>
+  <form class="form-horizontal paddedTop">
+    <div class="form-group">
+      <label for="var1" class="col-sm-2 control-label">prop1</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="var1" ng-model="data.prop1">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="var2" class="col-sm-2 control-label">prop2</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="var2" ng-model="data.prop2">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="var3" class="col-sm-2 control-label">prop3</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="var3" ng-model="data.prop3">
+      </div>
+    </div>
+    <button class="btn-default" ng-click="refresh()">
+      server.refresh()
+    </button>
+    <button class="btn-default" ng-click="update()">
+      server.update()
+    </button>
+    <button class="btn-default" ng-click="get()">
+      server.get({collectionName: "presidents"})
+    </button>
+	</form>
+</div>
